@@ -1,29 +1,31 @@
 <template>
-  <v-content id="app">
-    <router-view />
-  </v-content>
+  <div id="app">
+    <!-- <img src="./assets/logo.png" class="logo"> -->
+    <todolist />
+  </div>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld'
+import todolist from './components/todolist'
+
 export default {
-  name: "App",
-  data: () => ({
-    //
-  })
-};
+  name: 'App',
+  components: {
+    HelloWorld,
+    todolist
+  }
+}
 </script>
 
-
 <style>
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height: 100vh;
-  /* background-color: #E9E9F0; */
-  /* background-color: #f0f0f7; */
+  margin-top: 60px;
+  width: 100%;
 }
 </style>
